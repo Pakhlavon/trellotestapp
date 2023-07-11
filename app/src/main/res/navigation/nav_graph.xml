@@ -7,8 +7,25 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.app.kattabozor.view.fragments.HomeFragment"
+        android:name="com.app.trello.view.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment2"
+            app:destination="@id/LoginFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="com.app.trello.view.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
 </navigation>
